@@ -21,6 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\models\risk.py" />
     <Compile Include="CheckoutShield.py" />
   </ItemGroup>
   <ItemGroup>
