@@ -22,6 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app\models\risk.py" />
+    <Compile Include="app\models\scoring.py" />
     <Compile Include="CheckoutShield.py" />
   </ItemGroup>
   <ItemGroup>
