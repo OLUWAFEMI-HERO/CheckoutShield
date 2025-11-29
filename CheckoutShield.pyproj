@@ -21,6 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\api\risk.py" />
     <Compile Include="app\models\risk.py" />
     <Compile Include="app\models\scoring.py" />
     <Compile Include="app\services\risk_service.py" />
