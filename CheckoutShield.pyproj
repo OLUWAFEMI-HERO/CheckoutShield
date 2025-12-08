@@ -27,6 +27,7 @@
     <Compile Include="app\services\risk_service.py" />
     <Compile Include="app\services\rules.py" />
     <Compile Include="CheckoutShield.py" />
+    <Compile Include="Infrastructure\redis.py" />
     <Compile Include="tests\test_api.py" />
     <Compile Include="tests\test_risk_service.py" />
     <Compile Include="tests\test_rules.py" />
@@ -36,6 +37,7 @@
     <Folder Include="app\models\" />
     <Folder Include="app\api\" />
     <Folder Include="app\services\" />
+    <Folder Include="Infrastructure\" />
     <Folder Include="tests\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
