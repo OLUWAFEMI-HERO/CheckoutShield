@@ -1,0 +1,26 @@
+services:
+
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      REDIS_URL: redis://redis:6379
+      DATABASE_URL: postgresql+asyncpg://checkoutshield:checkoutshield@postgres:5432/checkoutshield
+    depends_on:
+      - postgres
+      - redis
+
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: checkoutshield
+      POSTGRES_USER: checkoutshield
+      POSTGRES_PASSWORD: checkoutshield
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:8
+    ports:
+      - "6379:6379"
