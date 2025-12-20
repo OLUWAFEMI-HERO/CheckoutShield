@@ -28,3 +28,38 @@ Risk Service
    |
    v
 Risk Decision
+```
+## Technology
+Python
+FastAPI
+PostgreSQL
+Redis
+Docker
+Pytest
+Run locally
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+
+uvicorn app.main:app --reload
+
+## Swagger:
+
+http://localhost:8000/docs
+
+## Run with Docker
+docker compose up --build
+
+
+##  Tests
+pytest
+Example
+POST /v1/risk/check
+
+## 
+The service evaluates transaction signals and returns an explainable risk score
+and decision.
+
+---
+
+

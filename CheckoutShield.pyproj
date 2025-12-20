@@ -24,6 +24,7 @@
     <Compile Include="app\api\risk.py" />
     <Compile Include="app\models\risk.py" />
     <Compile Include="app\models\scoring.py" />
+    <Compile Include="app\models\validators.py" />
     <Compile Include="app\services\risk_service.py" />
     <Compile Include="app\services\rules.py" />
     <Compile Include="CheckoutShield.py" />
