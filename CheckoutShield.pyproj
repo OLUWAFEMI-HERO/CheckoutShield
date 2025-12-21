@@ -28,6 +28,7 @@
     <Compile Include="app\services\risk_service.py" />
     <Compile Include="app\services\rules.py" />
     <Compile Include="CheckoutShield.py" />
+    <Compile Include="Dtos\RiskCheckReques.py" />
     <Compile Include="Infrastructure\database.py" />
     <Compile Include="Infrastructure\redis.py" />
     <Compile Include="tests\test_api.py" />
@@ -40,6 +41,7 @@
     <Folder Include="app\api\" />
     <Folder Include="app\services\" />
     <Folder Include="Infrastructure\" />
+    <Folder Include="Dtos\" />
     <Folder Include="tests\" />
   </ItemGroup>
   <ItemGroup>
