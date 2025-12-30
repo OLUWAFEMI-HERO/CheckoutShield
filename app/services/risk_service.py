@@ -6,7 +6,7 @@ from app.models.risk import (
     RiskDecision,
 )
 from app.services.rules import evaluate_rules
-from app.services.scoring import (
+from app.models.scoring import (
     calculate_risk_score,
     get_risk_level,
 )
