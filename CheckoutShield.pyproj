@@ -31,6 +31,7 @@
     <Compile Include="app\services\risk_scorer.py" />
     <Compile Include="app\services\risk_service.py" />
     <Compile Include="app\services\rules.py" />
+    <Compile Include="app\services\velocity.py" />
     <Compile Include="CheckoutShield.py" />
     <Compile Include="Dtos\payment.py" />
     <Compile Include="Dtos\RiskCheckReques.py" />
