@@ -12,6 +12,11 @@ class FraudScoringAgent:
         if payload.get("amount", 0) > self.max_amount:
             risk_score += 50
             reasons.append("Unusually high transaction amount.")
+
+        # Rule 2: Originating from flagged regions
+        if payload.get("country") in self.high_risk_countries:
+            risk_score += 50
+            reasons.append("Location flagged for high risk.")
         
         return {
             "is_safe": risk_score < 70,
