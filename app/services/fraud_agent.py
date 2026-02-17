@@ -23,3 +23,8 @@ class FraudScoringAgent:
             "risk_score": risk_score,
             "flagged_reasons": reasons
         }
+        
+# Testing the agent
+agent = FraudScoringAgent()
+result = agent.analyze_transaction({"amount": 6000, "country": "CountryX"})
+print(f"Transaction Analysis: {result}")
