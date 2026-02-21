@@ -1,9 +1,9 @@
-from redis.asyncio import Redis
+from redis.exceptions import RedisError
 
 
 class VelocityService:
 
-    def __init__(self, redis: Redis):
+    def __init__(self, redis):
         self.redis = redis
 
     async def record_checkout(
@@ -18,9 +18,15 @@ class VelocityService:
             f"customer:{customer_id}"
         )
 
-        count = await self.redis.incr(key)
+        try:
+            count = await self.redis.incr(key)
 
-        if count == 1:
-            await self.redis.expire(key, 60)
+            if count == 1:
+                await self.redis.expire(key, 60)
 
-        return count
+            return count
+
+        except RedisError:
+            # Do not fail checkout because the
+            # optional velocity signal is unavailable.
+            return 0
