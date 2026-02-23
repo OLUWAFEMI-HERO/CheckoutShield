@@ -28,6 +28,7 @@
     <Compile Include="app\models\signals.py" />
     <Compile Include="app\models\validators.py" />
     <Compile Include="app\services\decision_engine.py" />
+    <Compile Include="app\services\idempotency.py" />
     <Compile Include="app\services\risk_scorer.py" />
     <Compile Include="app\services\risk_service.py" />
     <Compile Include="app\services\rules.py" />
