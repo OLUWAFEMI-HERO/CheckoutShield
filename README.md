@@ -231,9 +231,9 @@ requirements.txt
 >   this in the trade-offs sections of the other projects in this
 >   engagement, if useful as a reference for tone.
 
-## What's next
+## What's next - below to be developed in next release
 
-> Fill in: 3-5 genuine next steps — e.g. a real ML scoring component
+> real time ML scoring component
 > alongside the rules engine, per-merchant configurable rule weights, a
 > feedback loop from confirmed-fraud outcomes back into scoring,
 > webhook-based async decisions for checks that can't complete in the
@@ -241,5 +241,4 @@ requirements.txt
 
 ## License
 
-> State the license (MIT is the common default for a public portfolio
-> repo) and add a `LICENSE` file at the repo root.
+> To be added.
