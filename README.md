@@ -158,14 +158,14 @@ Interactive API docs: **http://localhost:8000/docs**
 docker compose up --build
 ```
 
-> Fill in: what `docker compose up` actually brings up — the API, and
+> what `docker compose up` actually brings up — the API, and
 > presumably Postgres + Redis alongside it. Worth listing each service
 > and its port explicitly, since "it just works" is a weaker setup
 > section than "here's exactly what starts and where."
 
 ### Configuration
 
-> Fill in: what environment variables the service actually reads (database
+> database
 > URL, Redis URL, any API keys or thresholds), ideally with a
 > `.env.example` file in the repo this section links to.
 
@@ -212,7 +212,7 @@ requirements.txt
 > judgment, not just output. A few prompts, in the same spirit as the
 > architecture reasoning above:
 >
-> - **Why explainable signals, not just a score?** (Already touched on
+> - Why explainable signals, not just a score? (Already touched on
 >   above — expand with a concrete example of a decision your system can
 >   explain that a pure ML black-box score couldn't.)
 > - **Why Redis specifically for velocity/fast-path checks, and what's
@@ -224,7 +224,7 @@ requirements.txt
 >   This is a real design decision with a real trade-off (availability
 >   vs. risk exposure) and a strong thing to have an explicit, reasoned
 >   answer for.
-> - **What's NOT built, on purpose** — e.g. no ML model (rules/scoring
+> - What's NOT built, on purpose — e.g. no ML model (rules/scoring
 >   only), no merchant-configurable rule thresholds, no async/webhook
 >   decision path for slower checks. Naming scope boundaries explicitly
 >   is a strength, not an admission of incompleteness — see the note on
