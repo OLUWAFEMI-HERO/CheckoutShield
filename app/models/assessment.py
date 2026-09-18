@@ -8,3 +8,5 @@ class RiskAssessment:
     score: int
     level: str
     signals: list[RiskSignal]
+keys = self._order[-max(1, limit):]
+keys.reverse()

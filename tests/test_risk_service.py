@@ -65,3 +65,18 @@ def test_medium_risk_transaction_requires_review():
 
     assert result.risk_score == 45
     assert result.decision == RiskDecision.APPROVE
+
+def test_high_risk_transaction_requires_review():
+
+    result = RiskService().evaluate(
+        create_request(
+            amount=3000,
+            bin_country="US",
+            shipping_country="GB",
+            device_id="new-device",
+        )
+    )
+
+    assert result.risk_score == 45
+    assert result.risk_level == "MEDIUM"
+    assert result.decision == RiskDecision.APPROVE

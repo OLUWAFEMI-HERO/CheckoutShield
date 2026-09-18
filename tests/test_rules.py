@@ -10,7 +10,25 @@ from app.services.rules import (
     check_high_value_transaction,
     check_new_device,
 )
+def test_rule_signals_preserve_evaluation_order():
 
+    signals = evaluate_rules(
+        create_request(
+            amount=1500,
+            bin_country="US",
+            shipping_country="GB",
+            device_id="new-device",
+        )
+    )
+
+    assert [
+        signal.code
+        for signal in signals
+    ] == [
+        "HIGH_VALUE_TRANSACTION",
+        "COUNTRY_MISMATCH",
+        "NEW_DEVICE",
+    ]
 
 def create_request(
     amount: float = 100,

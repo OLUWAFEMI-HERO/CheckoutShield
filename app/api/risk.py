@@ -24,3 +24,15 @@ async def check_risk(
 ) -> RiskCheckResponse:
 
     return risk_service.evaluate(request)
+
+if idempotency_key:
+    try:
+        cached = idempotency.get(
+            idempotency_key,
+            payload_data,
+        )
+    except IdempotencyConflict as exc:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail=str(exc),
+        ) from exc

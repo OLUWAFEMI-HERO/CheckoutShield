@@ -55,3 +55,18 @@ class RiskService:
             return RiskDecision.REVIEW
 
         return RiskDecision.APPROVE
+
+    def __init__(
+        self,
+        scorer: RiskScorer | None = None,
+        decision_engine: DecisionEngine | None = None,
+        rule_config: RiskRuleConfig | None = None,
+    ) -> None:
+
+        self.scorer = scorer or RiskScorer()
+        self.decision_engine = (
+            decision_engine or DecisionEngine()
+        )
+        self.rule_config = (
+            rule_config or RiskRuleConfig()
+        )
